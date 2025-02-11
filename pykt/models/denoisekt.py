@@ -170,7 +170,7 @@ class DenoiseKTNet(nn.Module):
             q_embed_diff_data = self.get_avg_skill_emb(cc,self.skill_embed)
             # q_embed_diff_data = self.get_avg_skill_emb_ablation(cc,self.skill_embed)
 
-            pid_embed_data = self.difficult_param(cq)  # uq 当前problem的难度
+            pid_embed_data = self.difficult_param(cq)  # uq 
             q_embed_data = q_embed_data + pid_embed_data * \
                 q_embed_diff_data  # uq *d_ct + c_ct # question encoder
 
